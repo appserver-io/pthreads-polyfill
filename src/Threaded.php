@@ -102,8 +102,10 @@ if (!extension_loaded("pthreads")) {
 			return true;
 		}
 
-		public function synchronized(Closure $closure, ... $args) {
-			return $closure(...$args);
+		public function synchronized(Closure $closure) {
+		    $array = func_get_args();
+		    array_shift($array);
+		    return call_user_func_array($closure, $array);
 		}
 
 		public function isRunning() {
