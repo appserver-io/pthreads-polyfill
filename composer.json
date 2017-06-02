@@ -2,7 +2,10 @@
     "name": "krakjoe/pthreads-polyfill",
     "type": "library",
     "description": "A polyfill for pthreads",
-    "keywords": ["pthreads", "polyfill"],
+    "keywords": [
+        "pthreads",
+        "polyfill"
+    ],
     "homepage": "http://pthreads.org/",
     "license": "PHP",
     "authors": [
@@ -13,17 +16,17 @@
     ],
     "autoload": {
         "files": [
-			"src/Collectable.php",
-			"src/Threaded.php",
-			"src/Volatile.php",
-			"src/Thread.php",
-			"src/Worker.php",
-			"src/Pool.php"
-		]
+            "src/Collectable.php",
+            "src/Threaded.php",
+            "src/Stackable.php",
+            "src/Volatile.php",
+            "src/Thread.php",
+            "src/Worker.php",
+            "src/Pool.php"
+        ]
     },
     "minimum-stability": "dev",
     "require-dev": {
         "phpunit/phpunit": "^5"
     }
 }
-
