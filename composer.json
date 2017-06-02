@@ -1,5 +1,5 @@
 {
-    "name": "krakjoe/pthreads-polyfill",
+    "name": "appserver-io/pthreads-polyfill",
     "type": "library",
     "description": "A polyfill for pthreads",
     "keywords": [
