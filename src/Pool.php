@@ -15,12 +15,13 @@ if (!extension_loaded("pthreads")) {
 			}
 
 			if (!isset($this->workers[$this->last])) {
-				$this->workers[$this->last] = 
-					new $this->clazz(...$this->ctor);
+
+			    $reflectionClass = new ReflectionClass($this->clazz);
+			    $this->workers[$this->last] = $reflectionClass->newInstanceArgs($this->ctor);
 				$this->workers[$this->last]->start();
 			}
 
-			$this->workers[$this->last++]->stack($collectable);		
+			$this->workers[$this->last++]->stack($collectable);
 		}
 
 		public function submitTo($worker, Threaded $collectable) {
